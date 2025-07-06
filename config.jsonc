@@ -1,0 +1,64 @@
+{
+    "position": "left",
+
+	// modules displayed at the top
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+
+	//modulse displayed in the center
+	"modules-center": [
+		"clock"
+	],
+
+	//modules displayed at the bottom
+	"modules-right": [
+		"hyprland/language",
+		"battery"
+
+	],
+
+	"reload_style_on_change": true,
+
+
+	// modules config
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"urgent": "",
+			"default": ""
+		}
+	},
+
+	"hyprland/window": {
+		"format": "{title}",
+		"rotate": 90,
+		"max-length": 30
+	},
+
+	"hyprland/language": {
+		"format-en": "EN",
+		"format-ka": "GE",
+		"format-ru": "RU"
+	},
+
+	"clock": {
+		"format": "{:%H\n%M}"
+	},
+
+	"battery": {
+		"interval": 5,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}",
+		"format-icons": ["", "", "", "", ""],
+		"rotate": 90
+	},
+
+}
+

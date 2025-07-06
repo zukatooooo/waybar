@@ -1,0 +1,68 @@
+/* Base styling */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Material Icons", sans-serif;
+  font-size: 16px;
+  color: #cddff0;
+  min-height: 20px;
+}
+
+/* Waybar vertical layout (left) */
+window#waybar {
+  background-color: rgba(30, 43, 56, 0.65); /* #1e2b38 */
+  border-right: 2px solid #2e4c6d;
+}
+
+/* Module padding + vertical flow */
+#workspaces,
+#window,
+#clock,
+#language,
+#battery,
+#custom-volume {
+  padding: 12px 0;
+}
+
+/* Workspaces */
+#workspaces button {
+  color: #95b48f;
+  padding: 8px;
+  border: none;
+  background: none;
+  margin-left: 5px;
+  margin-right: 8px;
+
+}
+
+#workspaces button.active {
+  color: #3b6c93;
+}
+
+#workspaces button.urgent {
+  color: #cddff0;
+  font-weight: bold;
+}
+
+/* Window title */
+#window {
+  color: #80a3c4;
+  font-style: italic;
+}
+
+/* Clock */
+#clock {
+  font-size: 20px;
+  color: #cddff0;
+  font-weight: bold;
+}
+
+/* Language */
+#language {
+  color: #4e7263;
+  font-weight: bold;
+}
+
+/* Battery */
+#battery {
+  color: #95b48f;
+}
+
