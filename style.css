@@ -57,12 +57,23 @@ window#waybar {
 
 /* Language */
 #language {
-  color: #4e7263;
   font-weight: bold;
 }
 
 /* Battery */
 #battery {
   color: #95b48f;
+}
+
+#battery.warning {
+	color: #ffa500;
+}
+
+#battery.critical {
+	color: #ff0000;
+}
+
+#battery.charging {
+  color: #00FF00; /* green when charging */
 }
 

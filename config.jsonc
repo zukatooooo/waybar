@@ -50,13 +50,16 @@
 	},
 
 	"battery": {
-		"interval": 5,
+		"interval": 1,
 		"states": {
 			"warning": 30,
 			"critical": 15
 		},
 		"format": "{icon}",
-		"format-icons": ["", "", "", "", ""],
+		"format-icons": {
+			"charging": ["", "", "", "", ""],
+			"discharging": ["", "", "", "", ""]
+		},
 		"rotate": 90
 	},
 
