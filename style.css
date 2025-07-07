@@ -1,15 +1,15 @@
 /* Base styling */
 * {
-  font-family: "JetBrainsMono Nerd Font", "Material Icons", sans-serif;
-  font-size: 16px;
-  color: #cddff0;
-  min-height: 20px;
+	font-family: "JetBrainsMono Nerd Font", "Material Icons", sans-serif;
+	font-size: 16px;
+	color: #cddff0;
+	min-height: 20px;
 }
 
 /* Waybar vertical layout (left) */
 window#waybar {
-  background-color: rgba(30, 43, 56, 0.65); /* #1e2b38 */
-  border-right: 2px solid #2e4c6d;
+	background-color: rgba(30, 43, 56, 0.65); /* #1e2b38 */
+	border-right: 2px solid #2e4c6d;
 }
 
 /* Module padding + vertical flow */
@@ -19,50 +19,51 @@ window#waybar {
 #language,
 #battery,
 #custom-volume {
-  padding: 12px 0;
+	padding: 12px 0;
 }
 
 /* Workspaces */
 #workspaces button {
-  color: #95b48f;
-  padding: 8px;
-  border: none;
-  background: none;
-  margin-left: 5px;
-  margin-right: 8px;
+	color: #95b48f;
+	padding: 8px;
+	border: none;
+	background: none;
+	margin-left: 5px;
+	margin-right: 8px;
 
 }
 
 #workspaces button.active {
-  color: #3b6c93;
+	color: #3b6c93;
 }
 
 #workspaces button.urgent {
-  color: #cddff0;
-  font-weight: bold;
+	color: #cddff0;
+	font-weight: bold;
 }
 
 /* Window title */
 #window {
-  color: #80a3c4;
-  font-style: italic;
+	color: #80a3c4;
+	font-style: italic;
 }
 
 /* Clock */
 #clock {
-  font-size: 20px;
-  color: #cddff0;
-  font-weight: bold;
+	font-size: 20px;
+	color: #cddff0;
+	font-weight: bold;
 }
 
 /* Language */
 #language {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 /* Battery */
 #battery {
-  color: #95b48f;
+	font-size: 20px;
+	color: #95b48f;
 }
 
 #battery.warning {
@@ -74,6 +75,9 @@ window#waybar {
 }
 
 #battery.charging {
-  color: #00FF00; /* green when charging */
+	color: #00FF00;
 }
 
+#network {
+	font-size: 20px;
+}
