@@ -1,69 +1,60 @@
-/* Base styling */
+@import url("colors.css");
+
 * {
-	font-family: "JetBrainsMono Nerd Font", "Material Icons", sans-serif;
-	font-size: 16px;
-	color: #cddff0;
-	min-height: 20px;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 18px;
+    color: @color2;
 }
 
-/* Waybar vertical layout (left) */
 window#waybar {
-	background-color: rgba(30, 43, 56, 0.65); /* #1e2b38 */
-	border-right: 2px solid #2e4c6d;
+	background-color: @background;
+	border-right: 3px solid @color2;
 }
 
-/* Module padding + vertical flow */
-#workspaces,
-#window,
-#clock,
-#language,
-#battery,
-#custom-volume {
-	padding: 12px 0;
-}
+#workspaces {
+    margin-left: -8px;
+    margin-top: 5px;
+} 
 
-/* Workspaces */
-#workspaces button {
-	color: #95b48f;
-	padding: 8px;
-	border: none;
-	background: none;
-	margin-left: 5px;
-	margin-right: 8px;
-
-}
-
-#workspaces button.active {
-	color: #3b6c93;
-}
-
-#workspaces button.urgent {
-	color: #cddff0;
-	font-weight: bold;
-}
-
-/* Window title */
-#window {
-	color: #80a3c4;
-	font-style: italic;
-}
-
-/* Clock */
 #clock {
-	font-size: 20px;
-	color: #cddff0;
-	font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* Language */
+#idle_inhibitor {
+    margin-left: -8px;
+}
+
+#pulseaudio {
+    margin-left: -4px;
+    font-size: 25px;
+}
+
+#pulseaudio.bluetooth {
+    color: #1232ff;
+}
+
+#pulseaudio.muted {
+    color: #ff2323;
+}
+
+#network {
+    margin-left: -5px;
+    font-size: 18px;
+}
+
+#backlight {
+    font-size: 25px;
+    margin-left: -8px;
+}
+
 #language {
-	font-weight: bold;
+    font-weight: bold;
 }
 
-/* Battery */
 #battery {
-	font-size: 20px;
-	color: #95b48f;
+    font-size: 25px;
+    margin-bottom: 5px;
 }
 
 #battery.warning {
@@ -76,8 +67,4 @@ window#waybar {
 
 #battery.charging {
 	color: #00FF00;
-}
-
-#network {
-	font-size: 20px;
 }
