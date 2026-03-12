@@ -2,69 +2,104 @@
 
 * {
     font-family: JetBrainsMono Nerd Font;
-    font-size: 18px;
-    color: @color2;
+    font-size: 15px;
+    font-weight: bold
 }
 
 window#waybar {
-	background-color: @background;
-	border-right: 3px solid @color2;
+    background-color: transparent;
+    color: @foreground;
 }
 
-#workspaces {
-    margin-left: -8px;
-    margin-top: 5px;
-} 
+button {
+    border: none;
+    border-radius: 0px;
+}
 
-#clock {
-    font-size: 20px;
-    font-weight: bold;
+.modules-left {
+    background-color: @background;
+    border: 2px solid @color3;
+    margin: 4px 4px 0px 4px;
+}
+
+.modules-center {
+    background-color: @background;
+    border: 2px solid @color3;
+    margin: 4px 0px 0px 0px;
+}
+
+.modules-right {
+    background-color: @background;
+    border: 2px solid @color3;
+    margin: 4px 4px 0px 4px;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    background-color: transparent;
+    color: @foreground;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#pulseaudio,
+#tray,
+#info-menu,
+#sys-info,
+#sys-tray,
+#idle_inhibitor,
+#language {
+    padding: 0px 10px;
+    background-color: transparent;
+    color: @foreground;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0px;
+}
+
+#sys-info {
+    padding: 0px 0px 0px 10px;
+}
+
+#sys-tray {
+   padding: 0px 10px 0px 0px;
+}
+
+
+#custom-info-menu {
+    padding: 0px 10px 0px 0px;
+}
+
+#custom-tray-menu {
+    padding: 0px 0px 0px 10px;
+}
+
+#tray {
+    padding: 0px 0px 0px 10px;
 }
 
 #idle_inhibitor {
-    margin-left: -8px;
+    font-size: 20px;
 }
 
-#pulseaudio {
-    margin-left: -4px;
-    font-size: 25px;
+#pulseaudio,
+#idle_inhibitor,
+#memory,
+#temperature,
+#cpu,
+#taskbar {
+    margin: 3px;
+    border: 2px solid @color3;
 }
 
-#pulseaudio.bluetooth {
-    color: #1232ff;
-}
-
-#pulseaudio.muted {
-    color: #ff2323;
-}
-
-#network {
-    margin-left: -5px;
-    font-size: 18px;
-}
-
-#backlight {
-    font-size: 25px;
-    margin-left: -8px;
-}
-
-#language {
-    font-weight: bold;
-}
-
-#battery {
-    font-size: 25px;
-    margin-bottom: 5px;
-}
-
-#battery.warning {
-	color: #ffa500;
-}
-
-#battery.critical {
-	color: #ff0000;
-}
-
-#battery.charging {
-	color: #00FF00;
-}
